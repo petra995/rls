@@ -48,31 +48,31 @@ namespace рлс
                 {
                     if (!installedRLS[0] && currentRLS == 1)
                     {
-                        part = new Bitmap(Properties.Resources.рлс_иконка_1);
+                        part = new Bitmap(Properties.Resources._1л117);
                         g.DrawImage(part, e.X, e.Y);
                         installedRLS[0] = true;
                     }
                     if (!installedRLS[1] && currentRLS == 2)
                     {
-                        part = new Bitmap(Properties.Resources.рлс_иконка_2);
+                        part = new Bitmap(Properties.Resources._35н6);
                         g.DrawImage(part, e.X, e.Y);
                         installedRLS[1] = true;
                     }
                     if (!installedRLS[2] && currentRLS == 3)
                     {
-                        part = new Bitmap(Properties.Resources.рлс_иконка_3);
+                        part = new Bitmap(Properties.Resources._39н6);
                         g.DrawImage(part, e.X, e.Y);
                         installedRLS[2] = true;
                     }
                     if (!installedRLS[3] && currentRLS == 4)
                     {
-                        part = new Bitmap(Properties.Resources.рлс_иконка_4);
+                        part = new Bitmap(Properties.Resources._55ж6);
                         g.DrawImage(part, e.X, e.Y);
                         installedRLS[3] = true;
                     }
                     if (!installedRLS[4] && currentRLS == 5)
                     {
-                        part = new Bitmap(Properties.Resources.рлс_иконка_5);
+                        part = new Bitmap(Properties.Resources._19ж6);
                         g.DrawImage(part, e.X, e.Y);
                         installedRLS[4] = true;
                     }
@@ -84,7 +84,7 @@ namespace рлс
                 {
                     if (!installedLA[0] && currentLA == 1)
                     {
-                        part = new Bitmap(Properties.Resources.рлс_иконка_1);
+                        part = new Bitmap(Properties.Resources.su35g);
 
                         g.DrawImage(part, e.X, e.Y);
                         installedLA[0] = true;
@@ -98,7 +98,7 @@ namespace рлс
                     }
                     if (!installedLA[2] && currentLA == 3)
                     {
-                        part = new Bitmap(Properties.Resources.рлс_иконка_3);
+                        part = new Bitmap(Properties.Resources.yak_130_top);
                         g.DrawImage(part, e.X, e.Y);
                         installedLA[2] = true;
                     }
@@ -157,49 +157,48 @@ namespace рлс
         }
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            string selectedRLS="";
-            if (comboBox1.SelectedItem.ToString() != "") selectedRLS = comboBox1.SelectedItem.ToString();
-            if (selectedRLS == "1л117")
+            int selectedRLS = comboBox1.SelectedIndex;
+            if (selectedRLS == 0)
             {
                 currentRLS = 1;
             }
-            if (selectedRLS == "35н6")
+            if (selectedRLS == 1)
             {
                 currentRLS = 2;
             }
-            if (selectedRLS == "39н6")
+            if (selectedRLS == 2)
             {
                 currentRLS = 3;
             }
-            if (selectedRLS == "55ж6")
+            if (selectedRLS == 3)
             {
                 currentRLS = 4;
             }
-            if (selectedRLS == "19ж6")
+            if (selectedRLS == 4)
             {
                 currentRLS = 5;
             }
         }
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
-            string selectedLA = comboBox2.SelectedItem.ToString();
-            if (selectedLA == "ЛА1")
+            int selectedLA = comboBox2.SelectedIndex;
+            if (selectedLA == 0)
             {
                 currentLA = 1;
             }
-            if (selectedLA == "ЛА2")
+            if (selectedLA == 1)
             {
                 currentLA = 2;
             }
-            if (selectedLA == "ЛА3")
+            if (selectedLA == 2)
             {
                 currentLA = 3;
             }
-            if (selectedLA == "ЛА4")
+            if (selectedLA == 3)
             {
                 currentLA = 4;
             }
-            if (selectedLA == "ЛА5")
+            if (selectedLA == 4)
             {
                 currentLA = 5;
             }
