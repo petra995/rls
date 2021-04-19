@@ -157,7 +157,8 @@ namespace рлс
         }
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            string selectedRLS = comboBox1.SelectedItem.ToString();
+            string selectedRLS="";
+            if (comboBox1.SelectedItem.ToString() != "") selectedRLS = comboBox1.SelectedItem.ToString();
             if (selectedRLS == "1л117")
             {
                 currentRLS = 1;
