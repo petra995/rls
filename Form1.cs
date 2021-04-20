@@ -28,8 +28,8 @@ namespace рлс
         {
             InitializeComponent();
             textBox1.BackColor = Color.FromArgb(225, 225, 225);
-            
-        }        
+
+        }
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -52,6 +52,7 @@ namespace рлс
                         part = new Bitmap(Properties.Resources._1л117);
                         g.DrawImage(part, e.X, e.Y);
                         installedRLS[0] = true;
+
                     }
                     if (!installedRLS[1] && currentRLS == 2)
                     {
@@ -117,7 +118,6 @@ namespace рлс
                     }
                 }
             }
-            
         }
         private void pictureBox1_MouseMove(object sender, MouseEventArgs e)
         {
@@ -129,7 +129,6 @@ namespace рлс
             drawRLS = false;
             drawLA = false;
         }
-
         private void button2_Click(object sender, EventArgs e)
         {
             drawLA = true;
@@ -149,11 +148,11 @@ namespace рлс
             else isOnAir = false;
             if(drawRLS && !isOnEarth)
             {
-                MessageBox.Show("РЛС нужно ставить на землю.");
+                MessageBox.Show("РЛС нужно ставить на землю.","Ограничение");
             }
             if(drawLA && !isOnAir)
             {
-                MessageBox.Show("ЛА нужно устанавливать на небо.");
+                MessageBox.Show("ЛА нужно устанавливать на небо.","Ограничение");
             }
         }
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -209,6 +208,17 @@ namespace рлс
         {
             //Application.Restart();
             pictureBox1.Image = Properties.Resources.Безымянный2;
+        }
+
+        private void pictureBox1_Paint(object sender, PaintEventArgs e)
+        {
+            Image part = new Bitmap(Properties.Resources.mmfree_icon_sign_7033452);
+            e.Graphics.DrawImage(part, (float)((pictureBox1.Size.Width * 0.5) - 32), (float)(pictureBox1.Size.Height * 0.53 + pictureBox1.Size.Height * 0.47 * 0.5 - 35));
+        }
+
+        private void toolStripButton2_Click(object sender, EventArgs e)
+        {
+
         }
     }
     public class RLS
