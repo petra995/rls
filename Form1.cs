@@ -27,7 +27,8 @@ namespace рлс
         public Form1()
         {
             InitializeComponent();
-
+            textBox1.BackColor = Color.FromArgb(225, 225, 225);
+            
         }        
 
         private void button1_Click(object sender, EventArgs e)
@@ -120,7 +121,7 @@ namespace рлс
         }
         private void pictureBox1_MouseMove(object sender, MouseEventArgs e)
         {
-            label3.Text = (Convert.ToString(e.X) + " " + Convert.ToString(e.Y));
+            textBox1.Text = (Convert.ToString(e.X) + " " + Convert.ToString(e.Y));
             Graphics g = pictureBox1.CreateGraphics();
         }
         private void pictureBox1_MouseUp(object sender, MouseEventArgs e)
@@ -203,16 +204,12 @@ namespace рлс
                 currentLA = 5;
             }
         }
-        private void button1_MouseEnter(object sender, EventArgs e)
-        {
-            button1.BackColor = Color.FromArgb(141, 136, 63);
-        }
-        private void button1_MouseLeave(object sender, EventArgs e)
-        {
-            button1.BackColor = Color.FromArgb(189, 183, 107);
-        }
 
-        
+        private void toolStripButton1_Click(object sender, EventArgs e)
+        {
+            //Application.Restart();
+            pictureBox1.Image = Properties.Resources.Безымянный2;
+        }
     }
     public class RLS
     {

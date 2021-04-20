@@ -42,9 +42,11 @@ namespace рлс
             this.копироватьToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.справкаToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.toolStripContainer1 = new System.Windows.Forms.ToolStripContainer();
             this.label4 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.toolStrip1.SuspendLayout();
             this.toolStripContainer1.ContentPanel.SuspendLayout();
@@ -54,7 +56,7 @@ namespace рлс
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.DarkKhaki;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button1.Location = new System.Drawing.Point(12, 104);
             this.button1.Name = "button1";
@@ -63,8 +65,6 @@ namespace рлс
             this.button1.Text = "Установить на карте";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
-            this.button1.MouseEnter += new System.EventHandler(this.button1_MouseEnter);
-            this.button1.MouseLeave += new System.EventHandler(this.button1_MouseLeave);
             // 
             // label1
             // 
@@ -94,6 +94,7 @@ namespace рлс
             // 
             // comboBox2
             // 
+            this.comboBox2.BackColor = System.Drawing.SystemColors.Window;
             this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox2.FormattingEnabled = true;
             this.comboBox2.Items.AddRange(new object[] {
@@ -121,7 +122,7 @@ namespace рлс
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.DarkKhaki;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button2.Location = new System.Drawing.Point(12, 224);
             this.button2.Name = "button2";
@@ -151,9 +152,9 @@ namespace рлс
             this.label3.Location = new System.Drawing.Point(12, 284);
             this.label3.Margin = new System.Windows.Forms.Padding(3);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(23, 20);
+            this.label3.Size = new System.Drawing.Size(119, 20);
             this.label3.TabIndex = 11;
-            this.label3.Text = "Ж";
+            this.label3.Text = "Координаты:";
             // 
             // toolStrip1
             // 
@@ -164,11 +165,12 @@ namespace рлс
             this.toolStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.копироватьToolStripButton,
+            this.toolStripButton1,
             this.toolStripSeparator1,
             this.справкаToolStripButton});
             this.toolStrip1.Location = new System.Drawing.Point(-2, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(229, 27);
+            this.toolStrip1.Size = new System.Drawing.Size(367, 27);
             this.toolStrip1.TabIndex = 12;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -192,6 +194,15 @@ namespace рлс
             this.справкаToolStripButton.Name = "справкаToolStripButton";
             this.справкаToolStripButton.Size = new System.Drawing.Size(91, 24);
             this.справкаToolStripButton.Text = "Спр&авка";
+            // 
+            // toolStripButton1
+            // 
+            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
+            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton1.Name = "toolStripButton1";
+            this.toolStripButton1.Size = new System.Drawing.Size(138, 24);
+            this.toolStripButton1.Text = "Очистить карту";
+            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
             // 
             // toolStripContainer1
             // 
@@ -222,14 +233,24 @@ namespace рлс
             // button3
             // 
             this.button3.BackColor = System.Drawing.Color.DarkKhaki;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button3.Location = new System.Drawing.Point(12, 310);
+            this.button3.Location = new System.Drawing.Point(12, 343);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(130, 54);
             this.button3.TabIndex = 15;
             this.button3.Text = "Рассчитать отклонение";
             this.button3.UseVisualStyleBackColor = false;
+            // 
+            // textBox1
+            // 
+            this.textBox1.BackColor = System.Drawing.SystemColors.Control;
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox1.Location = new System.Drawing.Point(12, 310);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
+            this.textBox1.Size = new System.Drawing.Size(160, 27);
+            this.textBox1.TabIndex = 16;
             // 
             // Form1
             // 
@@ -237,6 +258,7 @@ namespace рлс
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.ClientSize = new System.Drawing.Size(1102, 583);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.toolStripContainer1);
@@ -284,6 +306,8 @@ namespace рлс
         private System.Windows.Forms.ToolStripContainer toolStripContainer1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.ToolStripButton toolStripButton1;
     }
 }
 
