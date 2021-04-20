@@ -28,6 +28,7 @@ namespace рлс
         {
             InitializeComponent();
             textBox1.BackColor = Color.FromArgb(225, 225, 225);
+            richTextBox1.BackColor = Color.FromArgb(225, 225, 225);
 
         }
 
@@ -161,22 +162,27 @@ namespace рлс
             if (selectedRLS == 0)
             {
                 currentRLS = 1;
+                richTextBox1.Text = "text rls 1";
             }
             if (selectedRLS == 1)
             {
                 currentRLS = 2;
+                richTextBox1.Text = "text rls 2";
             }
             if (selectedRLS == 2)
             {
                 currentRLS = 3;
+                richTextBox1.Text = "text rls 3";
             }
             if (selectedRLS == 3)
             {
                 currentRLS = 4;
+                richTextBox1.Text = "text rls 4";
             }
             if (selectedRLS == 4)
             {
                 currentRLS = 5;
+                richTextBox1.Text = "text rls 5";
             }
         }
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
@@ -185,22 +191,27 @@ namespace рлс
             if (selectedLA == 0)
             {
                 currentLA = 1;
+                richTextBox1.Text = "text la 1";
             }
             if (selectedLA == 1)
             {
                 currentLA = 2;
+                richTextBox1.Text = "text la 2";
             }
             if (selectedLA == 2)
             {
                 currentLA = 3;
+                richTextBox1.Text = "text la 3";
             }
             if (selectedLA == 3)
             {
                 currentLA = 4;
+                richTextBox1.Text = "text la 4";
             }
             if (selectedLA == 4)
             {
                 currentLA = 5;
+                richTextBox1.Text = "text la 51";
             }
         }
 
@@ -218,7 +229,13 @@ namespace рлс
 
         private void toolStripButton2_Click(object sender, EventArgs e)
         {
+            Form2 f2 = new Form2();
+            f2.Show();
+        }
 
+        private void button4_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
     public class RLS
