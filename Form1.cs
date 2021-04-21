@@ -12,29 +12,43 @@ namespace рлс
 {
     public partial class Form1 : Form
     {
-        RLS[] masRLS = new RLS[5];//
-        LA[] masLA = new LA[5];//
+        int n,m;
 
+        RLS[] masRLS;
+        LA[] masLA;
+        SKO[] masSKO;
 
+        int currentRLS;//текущий выбранный РЛС
+        bool[] installedRLS;//массив определяющий какие РЛС установлены
+        bool drawRLS;//флаг о том что рисуем РЛС
 
-        int currentRLS = 0;//текущий выбранный РЛС
-        bool[] installedRLS = new bool[5];//массив определяющий какие РЛС установлены
-        bool drawRLS = false;//флаг о том что рисуем РЛС
+        bool drawLA;//флаг о том что рисуем ЛА
+        int currentLA;//текущий выбранный ЛА
+        bool[] installedLA;//массив определяющий какие ЛА уже установлены
 
-        bool drawLA = false;//флаг о том что рисуем ЛА
-        int currentLA = 0;//текущий выбранный ЛА
-        bool[] installedLA = new bool[5];//массив определяющий какие ЛА уже установлены
-
-        bool isOnEarth = true;//флаг о том что курсор на земле (реализация в heightcheck)
-        bool isOnAir = true;//флаг о том что курсор на небе (реализация в heightcheck)
+        bool isOnEarth;//флаг о том что курсор на земле (реализация в heightcheck)
+        bool isOnAir;//флаг о том что курсор на небе (реализация в heightcheck)
 
 
         public Form1()
         {
             InitializeComponent();
+            InitializeValues();
             textBox1.BackColor = Color.FromArgb(225, 225, 225);
             richTextBox1.BackColor = Color.FromArgb(225, 225, 225);
 
+        }
+
+        private void InitializeValues()
+        {
+            n = comboBox1.Items.Count;
+            m = comboBox2.Items.Count;
+            masRLS = new RLS[n];
+            masLA = new LA[m];
+            masSKO = new SKO[m * n];
+
+            installedRLS = new bool[n];
+            installedLA = new bool[m];
         }
 
         private void button1_Click(object sender, EventArgs e)//установить РЛС
@@ -167,27 +181,134 @@ namespace рлс
             if (selectedRLS == 0)
             {
                 currentRLS = 1;
-                richTextBox1.Text = "text rls 1";
+                masRLS[0] = new RLS() 
+                {
+                    type = comboBox1.SelectedItem.ToString(),
+                    
+                    D = 1,
+                    Power = 1,
+                    G0 = 1,
+                    Lambda = 1,//длина волны
+                    Sensivity = 1,//чувствительность P пр мин
+                    q = 1,//параметр обнаружения
+                    K = 1,//результирующий коэффициент потерь 1.23 1.44 1.58
+                    Potential = 1,//приведенный потенциал
+                    DeltaW = 1,// эффективная полоса пропускания
+                    LambdaRLS = 1,// длина волны рлс
+                    TimeS = 1,//длительность импульсного сигнала на выходе приемника
+                    TetaE = 1,//ширина диграммы направленности антенны (ФАР) в плоскости Е, размерность которой определяет размерность ошибок
+                    Kg = 1
+
+                };
+                masRLS[0].description = "Номер: " + 1 + "\n" +
+                                        "Тип: " + masRLS[0].type + "\n" +
+                                        "Длина: " + masRLS[0].D + "\n" +
+                                        "Мощность: " + masRLS[0].Power + "\n" +
+                                        "Коэф усиления: " + masRLS[0].G0 + "\n" +
+                                        "Длина волны: " + masRLS[0].Lambda + "\n" +
+                                        "Чувствительность: " + masRLS[0].Sensivity + "\n" +
+                                        "Параметр обнаружения: " + masRLS[0].q + "\n" +
+                                        "Результирующий коэф потерь: " + masRLS[0].K + "\n" +
+                                        "Приведенный потенциал: " + masRLS[0].Potential + "\n" +
+                                        "Эффектив полоса пропускания: " + masRLS[0].DeltaW + "\n" +
+                                        "Длина волны РЛС: " + masRLS[0].LambdaRLS + "\n" +
+                                        "Длительность импульсного сигнала: " + masRLS[0].TimeS + "\n" +
+                                        "Ширина диаграммы направ антенны: " + masRLS[0].TetaE + "\n" +
+                                        "Еще чтото: " + masRLS[0].Kg + "\n";
+                richTextBox1.Text = masRLS[0].description;
+                //masRLS[10] = new RLS();
             }
             if (selectedRLS == 1)
             {
                 currentRLS = 2;
                 richTextBox1.Text = "text rls 2";
+                masRLS[1] = new RLS()
+                {
+                    type = comboBox1.SelectedItem.ToString(),
+                    D = 1,
+                    Power = 1,
+                    G0 = 1,
+                    Lambda = 1,//длина волны
+                    Sensivity = 1,//чувствительность P пр мин
+                    q = 1,//параметр обнаружения
+                    K = 1,//результирующий коэффициент потерь 1.23 1.44 1.58
+                    Potential = 1,//приведенный потенциал
+                    DeltaW = 1,// эффективная полоса пропускания
+                    LambdaRLS = 1,// длина волны рлс
+                    TimeS = 1,//длительность импульсного сигнала на выходе приемника
+                    TetaE = 1,//ширина диграммы направленности антенны (ФАР) в плоскости Е, размерность которой определяет размерность ошибок
+                    Kg = 1
+
+                };
             }
             if (selectedRLS == 2)
             {
                 currentRLS = 3;
                 richTextBox1.Text = "text rls 3";
+                masRLS[2] = new RLS()
+                {
+                    type = comboBox1.SelectedItem.ToString(),
+                    D = 1,
+                    Power = 1,
+                    G0 = 1,
+                    Lambda = 1,//длина волны
+                    Sensivity = 1,//чувствительность P пр мин
+                    q = 1,//параметр обнаружения
+                    K = 1,//результирующий коэффициент потерь 1.23 1.44 1.58
+                    Potential = 1,//приведенный потенциал
+                    DeltaW = 1,// эффективная полоса пропускания
+                    LambdaRLS = 1,// длина волны рлс
+                    TimeS = 1,//длительность импульсного сигнала на выходе приемника
+                    TetaE = 1,//ширина диграммы направленности антенны (ФАР) в плоскости Е, размерность которой определяет размерность ошибок
+                    Kg = 1
+
+                };
             }
             if (selectedRLS == 3)
             {
                 currentRLS = 4;
                 richTextBox1.Text = "text rls 4";
+                masRLS[3] = new RLS()
+                {
+                    type = comboBox1.SelectedItem.ToString(),
+                    D = 1,
+                    Power = 1,
+                    G0 = 1,
+                    Lambda = 1,//длина волны
+                    Sensivity = 1,//чувствительность P пр мин
+                    q = 1,//параметр обнаружения
+                    K = 1,//результирующий коэффициент потерь 1.23 1.44 1.58
+                    Potential = 1,//приведенный потенциал
+                    DeltaW = 1,// эффективная полоса пропускания
+                    LambdaRLS = 1,// длина волны рлс
+                    TimeS = 1,//длительность импульсного сигнала на выходе приемника
+                    TetaE = 1,//ширина диграммы направленности антенны (ФАР) в плоскости Е, размерность которой определяет размерность ошибок
+                    Kg = 1
+
+                };
             }
             if (selectedRLS == 4)
             {
                 currentRLS = 5;
                 richTextBox1.Text = "text rls 5";
+                masRLS[4] = new RLS()
+                {
+                    type = comboBox1.SelectedItem.ToString(),
+                    D = 1,
+                    Power = 1,
+                    G0 = 1,
+                    Lambda = 1,//длина волны
+                    Sensivity = 1,//чувствительность P пр мин
+                    q = 1,//параметр обнаружения
+                    K = 1,//результирующий коэффициент потерь 1.23 1.44 1.58
+                    Potential = 1,//приведенный потенциал
+                    DeltaW = 1,// эффективная полоса пропускания
+                    LambdaRLS = 1,// длина волны рлс
+                    TimeS = 1,//длительность импульсного сигнала на выходе приемника
+                    TetaE = 1,//ширина диграммы направленности антенны (ФАР) в плоскости Е, размерность которой определяет размерность ошибок
+                    Kg = 1
+
+                };
             }
         }
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
@@ -255,35 +376,35 @@ namespace рлс
     }
     public class RLS
     {
-        double LocationX, LocationY;
-        string type;
-
-        double D;//длина?
-        double Power;//излучаемая мощность
-        double G0;//коэфф усил
-        double Lambda;//длина волны
-        double Sensivity;//чувствительность P пр мин
-        double q;//параметр обнаружения
-        double K;//результирующий коэффициент потерь 1.23 1.44 1.58
-        double Potential;//приведенный потенциал
-        double DeltaW;// эффективная полоса пропускания
-        double LambdaRLS;// длина волны рлс
-        double TimeS;//длительность импульсного сигнала на выходе приемника
-        double TetaE;//ширина диграммы направленности антенны (ФАР) в плоскости Е, размерность которой определяет размерность ошибок
-        double Kg;//0.6 ili 0.4
+        public double LocationX, LocationY;
+        public string type;
+        public string description;
+        public double D;//длина?
+        public double Power;//излучаемая мощность
+        public double G0;//коэфф усил
+        public double Lambda;//длина волны
+        public double Sensivity;//чувствительность P пр мин
+        public double q;//параметр обнаружения
+        public double K;//результирующий коэффициент потерь 1.23 1.44 1.58
+        public double Potential;//приведенный потенциал
+        public double DeltaW;// эффективная полоса пропускания
+        public double LambdaRLS;// длина волны рлс
+        public double TimeS;//длительность импульсного сигнала на выходе приемника
+        public double TetaE;//ширина диграммы направленности антенны (ФАР) в плоскости Е, размерность которой определяет размерность ошибок
+        public double Kg;//0.6 ili 0.4
     }
     public class SKO
     {
-        double SigmaD;//ошибка измерения дальности
-        double SigmaV2;//ошибка в измерении скорости
-        double SigmaE;//ошибка в измерении угловых координат
+        public double SigmaD;//ошибка измерения дальности
+        public double SigmaV2;//ошибка в измерении скорости
+        public double SigmaE;//ошибка в измерении угловых координат
     }
     public class LA
     {
-        double LocationX, LocationY;
-        string type;
+        public double LocationX, LocationY;
+        public string type;
 
-        double Surface;//эфф отраж поверхность цели
+        public double Surface;//эфф отраж поверхность цели
     }
 }
     
