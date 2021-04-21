@@ -54,7 +54,7 @@ namespace RLS_Computing
             this.MaximizeBox = false;
             this.Name = "Form2";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "Form2";
+            this.Text = "Справка";
             this.ResumeLayout(false);
 
         }

@@ -16,7 +16,7 @@ namespace RLS_Computing
 
         RLS[] masRLS;
         LA[] masLA;
-        SKO[] masSKO;
+        SKO[,] masSKO;
 
         int selectedRLS;//текущий выбранный РЛС
         bool[] installedRLS;//массив определяющий какие РЛС установлены
@@ -46,7 +46,7 @@ namespace RLS_Computing
             m = comboBox2.Items.Count;
             masRLS = new RLS[n];
             masLA = new LA[m];
-            masSKO = new SKO[m * n];
+            masSKO = new SKO[m, n];
 
             installedRLS = new bool[n];
             installedLA = new bool[m];
@@ -357,7 +357,13 @@ namespace RLS_Computing
 
         private void button3_Click(object sender, EventArgs e)
         {
-
+            for (int i = 0; i < n; i++)
+            {
+                for (int j = 0; j < m; j++)
+                {
+                    masSKO[i, j] = new SKO(masRLS[i],masLA[j]);
+                }
+            }
         }
 
         private void toolStripButton3_Click(object sender, EventArgs e)
@@ -389,6 +395,10 @@ namespace RLS_Computing
         public double SigmaD;//ошибка измерения дальности
         public double SigmaV2;//ошибка в измерении скорости
         public double SigmaE;//ошибка в измерении угловых координат
+        public SKO(RLS rls, LA la)
+        {
+            SigmaD = 1;
+        }
     }
     public class LA
     {
