@@ -1,5 +1,5 @@
 ﻿
-namespace рлс
+namespace RLS_Computing
 {
     partial class Form1
     {
@@ -248,7 +248,7 @@ namespace рлс
             // 
             // toolStripButton3
             // 
-            this.toolStripButton3.Image = global::рлс.Properties.Resources.icons8_restart_96;
+            this.toolStripButton3.Image = global::RLS_Computing.Properties.Resources.icons8_restart_96;
             this.toolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton3.Name = "toolStripButton3";
             this.toolStripButton3.Size = new System.Drawing.Size(136, 28);
@@ -257,7 +257,7 @@ namespace рлс
             // 
             // toolStripButton1
             // 
-            this.toolStripButton1.Image = global::рлс.Properties.Resources.icons8_erase_96__1_1;
+            this.toolStripButton1.Image = global::RLS_Computing.Properties.Resources.icons8_erase_96__1_1;
             this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton1.Name = "toolStripButton1";
             this.toolStripButton1.Size = new System.Drawing.Size(138, 28);
@@ -266,7 +266,7 @@ namespace рлс
             // 
             // toolStripButton2
             // 
-            this.toolStripButton2.Image = global::рлс.Properties.Resources.icons8_help_96;
+            this.toolStripButton2.Image = global::RLS_Computing.Properties.Resources.icons8_help_96;
             this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton2.Name = "toolStripButton2";
             this.toolStripButton2.Size = new System.Drawing.Size(91, 28);
@@ -276,7 +276,7 @@ namespace рлс
             // pictureBox1
             // 
             this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox1.Image = global::рлс.Properties.Resources.Безымянный2;
+            this.pictureBox1.Image = global::RLS_Computing.Properties.Resources.Безымянный2;
             this.pictureBox1.Location = new System.Drawing.Point(156, 41);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(832, 468);

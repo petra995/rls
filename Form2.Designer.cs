@@ -1,5 +1,5 @@
 ﻿
-namespace рлс
+namespace RLS_Computing
 {
     partial class Form2
     {

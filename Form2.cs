@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace рлс
+namespace RLS_Computing
 {
     public partial class Form2 : Form
     {

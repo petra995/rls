@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{1EC98DEB-EA5C-4378-B458-69BB898C6637}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>рлс</RootNamespace>
-    <AssemblyName>рлс</AssemblyName>
+    <RootNamespace>RLS_Computing</RootNamespace>
+    <AssemblyName>RLS_Computing</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>

@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace рлс
+namespace RLS_Computing
 {
     public partial class Form1 : Form
     {
@@ -18,12 +18,12 @@ namespace рлс
         LA[] masLA;
         SKO[] masSKO;
 
-        int currentRLS;//текущий выбранный РЛС
+        int selectedRLS;//текущий выбранный РЛС
         bool[] installedRLS;//массив определяющий какие РЛС установлены
         bool drawRLS;//флаг о том что рисуем РЛС
 
         bool drawLA;//флаг о том что рисуем ЛА
-        int currentLA;//текущий выбранный ЛА
+        int selectedLA;//текущий выбранный ЛА
         bool[] installedLA;//массив определяющий какие ЛА уже установлены
 
         bool isOnEarth;//флаг о том что курсор на земле (реализация в heightcheck)
@@ -36,7 +36,8 @@ namespace рлс
             InitializeValues();
             textBox1.BackColor = Color.FromArgb(225, 225, 225);
             richTextBox1.BackColor = Color.FromArgb(225, 225, 225);
-
+            comboBox2.SelectedIndex = 0;
+            comboBox1.SelectedIndex = 0;
         }
 
         private void InitializeValues()
@@ -67,32 +68,32 @@ namespace рлс
             {
                 if (isOnEarth)
                 {
-                    if (!installedRLS[0] && currentRLS == 1)
+                    if (!installedRLS[0] && selectedRLS == 0)
                     {
                         part = new Bitmap(Properties.Resources._1л117);
                         g.DrawImage(part, e.X, e.Y);
                         installedRLS[0] = true;
 
                     }
-                    if (!installedRLS[1] && currentRLS == 2)
+                    if (!installedRLS[1] && selectedRLS == 1)
                     {
                         part = new Bitmap(Properties.Resources._35н6);
                         g.DrawImage(part, e.X, e.Y);
                         installedRLS[1] = true;
                     }
-                    if (!installedRLS[2] && currentRLS == 3)
+                    if (!installedRLS[2] && selectedRLS == 2)
                     {
                         part = new Bitmap(Properties.Resources._39н6);
                         g.DrawImage(part, e.X, e.Y);
                         installedRLS[2] = true;
                     }
-                    if (!installedRLS[3] && currentRLS == 4)
+                    if (!installedRLS[3] && selectedRLS == 3)
                     {
                         part = new Bitmap(Properties.Resources._55ж6);
                         g.DrawImage(part, e.X, e.Y);
                         installedRLS[3] = true;
                     }
-                    if (!installedRLS[4] && currentRLS == 5)
+                    if (!installedRLS[4] && selectedRLS == 4)
                     {
                         part = new Bitmap(Properties.Resources._19ж6);
                         g.DrawImage(part, e.X, e.Y);
@@ -104,33 +105,33 @@ namespace рлс
             {
                 if (isOnAir)
                 {
-                    if (!installedLA[0] && currentLA == 1)
+                    if (!installedLA[0] && selectedLA == 0)
                     {
                         part = new Bitmap(Properties.Resources.su35g);
 
                         g.DrawImage(part, e.X, e.Y);
                         installedLA[0] = true;
                     }
-                    if (!installedLA[1] && currentLA == 2)
+                    if (!installedLA[1] && selectedLA == 1)
                     {
                         part = new Bitmap(Properties.Resources.бпла);
                         g.DrawImage(part, e.X, e.Y);
 
                         installedLA[1] = true;
                     }
-                    if (!installedLA[2] && currentLA == 3)
+                    if (!installedLA[2] && selectedLA == 2)
                     {
                         part = new Bitmap(Properties.Resources.yak_130_top);
                         g.DrawImage(part, e.X, e.Y);
                         installedLA[2] = true;
                     }
-                    if (!installedLA[3] && currentLA == 4)
+                    if (!installedLA[3] && selectedLA == 3)
                     {
                         part = new Bitmap(Properties.Resources.рлс_иконка_4);
                         g.DrawImage(part, e.X, e.Y);
                         installedLA[3] = true;
                     }
-                    if (!installedLA[4] && currentLA == 5)
+                    if (!installedLA[4] && selectedLA == 4)
                     {
                         part = new Bitmap(Properties.Resources.рлс_иконка_5);
                         g.DrawImage(part, e.X, e.Y);
@@ -142,7 +143,6 @@ namespace рлс
         private void pictureBox1_MouseMove(object sender, MouseEventArgs e)
         {
             textBox1.Text = (Convert.ToString(e.X) + " " + Convert.ToString(e.Y));
-            Graphics g = pictureBox1.CreateGraphics();
         }
         private void pictureBox1_MouseUp(object sender, MouseEventArgs e)
         {
@@ -177,10 +177,9 @@ namespace рлс
         }
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            int selectedRLS = comboBox1.SelectedIndex;
+            selectedRLS = comboBox1.SelectedIndex;
             if (selectedRLS == 0)
             {
-                currentRLS = 1;
                 masRLS[0] = new RLS() 
                 {
                     type = comboBox1.SelectedItem.ToString(),
@@ -220,7 +219,6 @@ namespace рлс
             }
             if (selectedRLS == 1)
             {
-                currentRLS = 2;
                 richTextBox1.Text = "text rls 2";
                 masRLS[1] = new RLS()
                 {
@@ -243,7 +241,6 @@ namespace рлс
             }
             if (selectedRLS == 2)
             {
-                currentRLS = 3;
                 richTextBox1.Text = "text rls 3";
                 masRLS[2] = new RLS()
                 {
@@ -266,7 +263,6 @@ namespace рлс
             }
             if (selectedRLS == 3)
             {
-                currentRLS = 4;
                 richTextBox1.Text = "text rls 4";
                 masRLS[3] = new RLS()
                 {
@@ -289,7 +285,6 @@ namespace рлс
             }
             if (selectedRLS == 4)
             {
-                currentRLS = 5;
                 richTextBox1.Text = "text rls 5";
                 masRLS[4] = new RLS()
                 {
@@ -313,30 +308,26 @@ namespace рлс
         }
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
-            int selectedLA = comboBox2.SelectedIndex;
+            selectedLA = comboBox2.SelectedIndex;
             if (selectedLA == 0)
             {
-                currentLA = 1;
+
                 richTextBox1.Text = "text la 1";
             }
             if (selectedLA == 1)
             {
-                currentLA = 2;
                 richTextBox1.Text = "text la 2";
             }
             if (selectedLA == 2)
             {
-                currentLA = 3;
                 richTextBox1.Text = "text la 3";
             }
             if (selectedLA == 3)
             {
-                currentLA = 4;
                 richTextBox1.Text = "text la 4";
             }
             if (selectedLA == 4)
             {
-                currentLA = 5;
                 richTextBox1.Text = "text la 51";
             }
         }
