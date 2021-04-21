@@ -12,16 +12,21 @@ namespace рлс
 {
     public partial class Form1 : Form
     {
-        int currentRLS = 0;
-        bool[] installedRLS = new bool[5];
-        bool drawRLS = false;
+        RLS[] masRLS = new RLS[5];//
+        LA[] masLA = new LA[5];//
 
-        bool drawLA = false;
-        int currentLA = 0;
-        bool[] installedLA = new bool[5];
 
-        bool isOnEarth = true;
-        bool isOnAir = true;
+
+        int currentRLS = 0;//текущий выбранный РЛС
+        bool[] installedRLS = new bool[5];//массив определяющий какие РЛС установлены
+        bool drawRLS = false;//флаг о том что рисуем РЛС
+
+        bool drawLA = false;//флаг о том что рисуем ЛА
+        int currentLA = 0;//текущий выбранный ЛА
+        bool[] installedLA = new bool[5];//массив определяющий какие ЛА уже установлены
+
+        bool isOnEarth = true;//флаг о том что курсор на земле (реализация в heightcheck)
+        bool isOnAir = true;//флаг о том что курсор на небе (реализация в heightcheck)
 
 
         public Form1()
@@ -32,16 +37,16 @@ namespace рлс
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)//установить РЛС
         {
             drawRLS = true;
             drawLA = false;
         }
 
-        private void pictureBox1_MouseDown(object sender, MouseEventArgs e)
+        private void pictureBox1_MouseDown(object sender, MouseEventArgs e)//тык по карте
         {
             label3.Text = (Convert.ToString(e.X) + " " + Convert.ToString(e.Y));
-            heightCheck(e);
+            HeightCheck(e);
             Graphics g = pictureBox1.CreateGraphics();
             Image part;
             if(drawRLS)
@@ -135,7 +140,7 @@ namespace рлс
             drawLA = true;
             drawRLS = false;
         }
-        void heightCheck(MouseEventArgs e)
+        void HeightCheck(MouseEventArgs e)
         {
             if (e.Y > pictureBox1.Size.Height*0.53 && e.Y < pictureBox1.Size.Height)
             {
@@ -241,6 +246,11 @@ namespace рлс
         private void button3_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void toolStripButton3_Click(object sender, EventArgs e)
+        {
+            Application.Restart();
         }
     }
     public class RLS

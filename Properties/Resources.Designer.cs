@@ -113,36 +113,6 @@ namespace рлс.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap icons8_broom_96 {
-            get {
-                object obj = ResourceManager.GetObject("icons8-broom-96", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap icons8_broom_961 {
-            get {
-                object obj = ResourceManager.GetObject("icons8-broom-961", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap icons8_erase_96 {
-            get {
-                object obj = ResourceManager.GetObject("icons8-erase-96", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap icons8_erase_96__1_ {
             get {
                 object obj = ResourceManager.GetObject("icons8-erase-96 (1)", resourceCulture);
@@ -163,26 +133,6 @@ namespace рлс.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap icons8_erase_96__3_ {
-            get {
-                object obj = ResourceManager.GetObject("icons8-erase-96 (3)", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap icons8_erase_961 {
-            get {
-                object obj = ResourceManager.GetObject("icons8-erase-961", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap icons8_help_96 {
             get {
                 object obj = ResourceManager.GetObject("icons8-help-96", resourceCulture);
@@ -193,19 +143,9 @@ namespace рлс.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap mmfree_icon_sign_703345 {
+        internal static System.Drawing.Bitmap icons8_restart_96 {
             get {
-                object obj = ResourceManager.GetObject("mmfree-icon-sign-703345", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap mmfree_icon_sign_7033451 {
-            get {
-                object obj = ResourceManager.GetObject("mmfree-icon-sign-7033451", resourceCulture);
+                object obj = ResourceManager.GetObject("icons8-restart-96", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -256,36 +196,6 @@ namespace рлс.Properties {
         internal static System.Drawing.Bitmap бпла {
             get {
                 object obj = ResourceManager.GetObject("бпла", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap рлс_иконка_1 {
-            get {
-                object obj = ResourceManager.GetObject("рлс_иконка_1", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap рлс_иконка_2 {
-            get {
-                object obj = ResourceManager.GetObject("рлс_иконка_2", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap рлс_иконка_3 {
-            get {
-                object obj = ResourceManager.GetObject("рлс_иконка_3", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

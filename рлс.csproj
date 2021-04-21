@@ -93,18 +93,6 @@
     <None Include="Resources\Безымянный2.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\рлс иконка.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\рлс иконка 1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\рлс иконка 2.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\рлс иконка 3.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\рлс иконка 4.png" />
   </ItemGroup>
   <ItemGroup>
@@ -144,28 +132,19 @@
     <None Include="Resources\icons8-erase-96 %281%291.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\icons8-broom-96.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icons8-broom-961.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\icons8-erase-96 %283%29.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8-help-96.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\mmfree-icon-sign-703345.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\mmfree-icon-sign-7033451.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\mmfree-icon-sign-7033452.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\бпла.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-restart-96.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
