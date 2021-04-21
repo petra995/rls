@@ -164,5 +164,8 @@
   <ItemGroup>
     <None Include="Resources\mmfree-icon-sign-7033452.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\бпла.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -253,6 +253,16 @@ namespace рлс.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap бпла {
+            get {
+                object obj = ResourceManager.GetObject("бпла", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap рлс_иконка_1 {
             get {
                 object obj = ResourceManager.GetObject("рлс_иконка_1", resourceCulture);

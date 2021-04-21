@@ -94,7 +94,7 @@ namespace рлс
                     }
                     if (!installedLA[1] && currentLA == 2)
                     {
-                        part = new Bitmap(Properties.Resources.рлс_иконка_2);
+                        part = new Bitmap(Properties.Resources.бпла);
                         g.DrawImage(part, e.X, e.Y);
 
                         installedLA[1] = true;
@@ -236,6 +236,11 @@ namespace рлс
         private void button4_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
         }
     }
     public class RLS

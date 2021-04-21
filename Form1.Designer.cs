@@ -49,6 +49,7 @@ namespace рлс
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.button4 = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
+            this.button5 = new System.Windows.Forms.Button();
             this.toolStrip1.SuspendLayout();
             this.toolStripContainer1.ContentPanel.SuspendLayout();
             this.toolStripContainer1.SuspendLayout();
@@ -160,7 +161,7 @@ namespace рлс
             this.toolStripButton2});
             this.toolStrip1.Location = new System.Drawing.Point(-2, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(238, 31);
+            this.toolStrip1.Size = new System.Drawing.Size(277, 31);
             this.toolStrip1.TabIndex = 12;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -224,6 +225,7 @@ namespace рлс
             this.button3.TabIndex = 15;
             this.button3.Text = "Рассчитать отклонение";
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // textBox1
             // 
@@ -266,9 +268,9 @@ namespace рлс
             this.button4.BackColor = System.Drawing.Color.DarkKhaki;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button4.Location = new System.Drawing.Point(12, 455);
+            this.button4.Location = new System.Drawing.Point(12, 463);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(138, 54);
+            this.button4.Size = new System.Drawing.Size(138, 46);
             this.button4.TabIndex = 18;
             this.button4.Text = "Выход";
             this.button4.UseVisualStyleBackColor = false;
@@ -283,12 +285,25 @@ namespace рлс
             this.label5.TabIndex = 19;
             this.label5.Text = "Информация:";
             // 
+            // button5
+            // 
+            this.button5.BackColor = System.Drawing.Color.DarkKhaki;
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button5.Location = new System.Drawing.Point(12, 403);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(138, 54);
+            this.button5.TabIndex = 20;
+            this.button5.Text = "Кнопка еще одна";
+            this.button5.UseVisualStyleBackColor = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.ClientSize = new System.Drawing.Size(1239, 521);
+            this.Controls.Add(this.button5);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.richTextBox1);
@@ -345,6 +360,7 @@ namespace рлс
         private System.Windows.Forms.RichTextBox richTextBox1;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button button5;
     }
 }
 
