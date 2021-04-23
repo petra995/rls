@@ -63,9 +63,9 @@ namespace RLS_Computing.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _19ж6 {
+        internal static System.Drawing.Bitmap _19ж6_1 {
             get {
-                object obj = ResourceManager.GetObject("_19ж6", resourceCulture);
+                object obj = ResourceManager.GetObject("_19ж6_1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -73,9 +73,9 @@ namespace RLS_Computing.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _1л117 {
+        internal static System.Drawing.Bitmap _1л117м {
             get {
-                object obj = ResourceManager.GetObject("_1л117", resourceCulture);
+                object obj = ResourceManager.GetObject("_1л117м", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -83,9 +83,9 @@ namespace RLS_Computing.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _35н6 {
+        internal static System.Drawing.Bitmap _22ж6 {
             get {
-                object obj = ResourceManager.GetObject("_35н6", resourceCulture);
+                object obj = ResourceManager.GetObject("_22ж6", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -93,9 +93,9 @@ namespace RLS_Computing.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _39н6 {
+        internal static System.Drawing.Bitmap _35д6 {
             get {
-                object obj = ResourceManager.GetObject("_39н6", resourceCulture);
+                object obj = ResourceManager.GetObject("_35д6", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -121,9 +121,6 @@
     <None Include="Resources\_39н6.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\_55ж6.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\yak-130_top.png" />
   </ItemGroup>
   <ItemGroup>
@@ -155,6 +152,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8-restart-96.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_1л117м.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_22ж6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_35д6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_55ж6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_19ж6_1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
