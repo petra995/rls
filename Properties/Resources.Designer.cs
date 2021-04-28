@@ -63,9 +63,9 @@ namespace RLS_Computing.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _19ж6_1 {
+        internal static System.Drawing.Bitmap _19ж6 {
             get {
-                object obj = ResourceManager.GetObject("_19ж6_1", resourceCulture);
+                object obj = ResourceManager.GetObject("_19ж6", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -113,6 +113,16 @@ namespace RLS_Computing.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap goal {
+            get {
+                object obj = ResourceManager.GetObject("goal", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_erase_96__1_ {
             get {
                 object obj = ResourceManager.GetObject("icons8-erase-96 (1)", resourceCulture);
@@ -146,16 +156,6 @@ namespace RLS_Computing.Properties {
         internal static System.Drawing.Bitmap icons8_restart_96 {
             get {
                 object obj = ResourceManager.GetObject("icons8-restart-96", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap mmfree_icon_sign_7033452 {
-            get {
-                object obj = ResourceManager.GetObject("mmfree-icon-sign-7033452", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

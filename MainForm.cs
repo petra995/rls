@@ -46,7 +46,7 @@ namespace RLS_Computing
             m = comboBox2.Items.Count;
             masRLS = new RLS[n];
             masLA = new LA[m];
-            masSKO = new SKO[m, n];
+            masSKO = new SKO[n, m];
             for (int i = 0; i < n; i++)
             {
                 masRLS[i] = new RLS();
@@ -102,7 +102,7 @@ namespace RLS_Computing
                     }
                     if (!installedRLS[4] && selectedRLS == 4)
                     {
-                        part = new Bitmap(Properties.Resources._19ж6_1);
+                        part = new Bitmap(Properties.Resources._19ж6);
                         g.DrawImage(part, e.X, e.Y);
                         installedRLS[4] = true;
                     }
@@ -191,6 +191,30 @@ namespace RLS_Computing
                     masRLS[0] = new RLS()
                     {
                         type = comboBox1.SelectedItem.ToString(),
+                        description = "Диапазон волн - Сантиметровый-(13 см)\n" +
+                                        "Пределы работы\n" +
+                                        "по дальности, км 5…400\n" +
+                                        "по азимуту, град. 0…360\n" +
+                                        "по углу места, град. 0…30\n" +
+                                        "по высоте, км 0…30\n" +
+                                        "Дальность обнаружения\n" +
+                                        "воздушной цели с ЭПР 1м2, км,\n" +
+                                        "на высотах 100 м 37\n" +
+                                        "500 м 75\n" +
+                                        "1000 м 105\n" +
+                                        "10000 м 310\n" +
+                                        "Коэффициент подавления отражений от местных предметов, дБ 40\n" +
+                                        "Период обзора пространства, с 10\n" +
+                                        "Количество сопровождаемых целей 120\n" +
+                                        "Точность измерения координат:\n" +
+                                        "дальности, м 300\n" +
+                                        "азимута, мин 15 (20 ПАП)\n" +
+                                        "высоты, м 500 (800)\n" +
+                                        "Разрешающая способность:\n" +
+                                        "по дальности, м 400\n" +
+                                        "по азимуту, град. 3,5\n" +
+                                        "\n" +
+                                        "Средняя излучаемая мощность, кВт 14",
                         D = 1,
                         Power = 14,
                         G0 = 1,
@@ -209,6 +233,30 @@ namespace RLS_Computing
                     masRLS[1] = new RLS()
                     {
                         type = comboBox1.SelectedItem.ToString(),
+                        description = "Диапазон волн - метровый\n" +
+                                        "Пределы работы\n" +
+                                        "по дальности, км 1200\n" +
+                                        "по азимуту, град. 0…360\n" +
+                                        "по углу места, град. 16\n" +
+                                        "по высоте, км. 75\n" +
+                                        "Дальность обнаружения воздушной цели с ЭПР 1м2, км,\n" +
+                                        "на высотах 100 м 35\n" +
+                                        "500 м 80\n" +
+                                        "1000 м 110\n" +
+                                        "4000 м 200\n" +
+                                        "10000 м 300\n" +
+                                        "Помехозащищенность: от пассивной помехи, пачек на 100м пути 1-2\n" +
+                                        "от активной помехи, Вт/МГц 10\n" +
+                                        "Период обзора пространства, с 10,20\n" +
+                                        "Точность измерения координат:\n" +
+                                        "дальности, м 400\n" +
+                                        "азимута, град. 1\n" +
+                                        "по углу места, град. 2\n" +
+                                        "Разрешающая способность:\n" +
+                                        "по дальности, м 1700\n" +
+                                        "по азимуту, град. 1\n" +
+                                        "Средняя излучаемая\n" +
+                                        "мощность, кВт 14…17",
                         D = 1,
                         Power = 15.5,
                         G0 = 1,
@@ -225,9 +273,39 @@ namespace RLS_Computing
                     };
                     break;
                 case 2:
-                    masRLS[1] = new RLS()
+                    masRLS[2] = new RLS()
                     {
                         type = comboBox1.SelectedItem.ToString(),
+                        description = "Диапазон волн - сантиметровый\n" +
+                                        "Пределы работы\n" +
+                                        "по дальности, км 05…200\n" +
+                                        "по азимуту, град. 0…360\n" +
+                                        "по углу места, град. –0,10…+30\n" +
+                                        "по высоте, км 100\n" +
+                                        "Дальность обнаружения\n" +
+                                        "воздушной цели с ЭПР 1м2, км,\n" +
+                                        "на высотах 50 м 40\n" +
+                                        "100 м 46\n" +
+                                        "500 м 86\n" +
+                                        "1000 м 120\n" +
+                                        "10000 м 200\n" +
+                                        "Коэффициент подавления\n" +
+                                        "отражений от местных\n" +
+                                        "предметов, дБ 48\n" +
+                                        "Период обзора пространства, с 5,10\n" +
+                                        "Количество сопровождаемых\n" +
+                                        "целей 127\n" +
+                                        "Точность измерения координат:\n" +
+                                        "дальности, м 250\n" +
+                                        "азимута, мин. 20\n" +
+                                        "высоты, м 400\n" +
+                                        "Разрешающая способность:\n" +
+                                        "по дальности, м 300\n" +
+                                        "по азимуту, град. 4\n" +
+                                        "по высоте, м 1500\n" +
+                                        "\n" +
+                                        "Средняя излучаемая\n" +
+                                        "мощность, кВт 3\n",
                         D = 1,
                         Power = 3,
                         G0 = 1,
@@ -240,13 +318,31 @@ namespace RLS_Computing
                         LambdaRLS = 1,// длина волны рлс
                         TimeS = 1,//длительность импульсного сигнала на выходе приемника
                         TetaE = 1,//ширина диграммы направленности антенны (ФАР) в плоскости Е, размерность которой определяет размерность ошибок
-                        Kg = 1
                     };
                     break;
                 case 3:
-                    masRLS[1] = new RLS()
+                    masRLS[3] = new RLS()
                     {
                         type = comboBox1.SelectedItem.ToString(),
+                        description = "Диапазон рабочих частот, см 10\n" +
+                                        "Максимальная дальность, км 350\n" +
+                                        "Угол обзора в вертикальной плоскости, рад. 28\n" +
+                                        "Точность определения координат (СКО):\n" +
+                                        "дальности, м 125\n" +
+                                        "азимута, угл. мин. 6\n" +
+                                        "высоты, м 400\n" +
+                                        "Разрешающая способность: 170\n" +
+                                        "по дальности, м 125\n" +
+                                        "по азимуту, град. 1\n" +
+                                        "Коэффициент подавления отражений от местных предметов, дБ 45\n" +
+                                        "Темп обновления информации, с 5 и 10\n" +
+                                        "Количество сопровождаемых целей 200\n" +
+                                        "Потребляемая мощность, кВт 50\n" +
+                                        "Условия окружающей среды: трассы\n" +
+                                        "рабочий диапазон температур, °С от – 40 до +50\n" +
+                                        "относительная влажность, % до 100 (в тропическом исполнении)\n" +
+                                        "скорость ветра, м/с до 25 без РПУ\n" +
+                                        "Время свертывания и развертывания РЛС, ч 5",
                         D = 1,
                         Power = 1,
                         G0 = 1,
@@ -259,13 +355,41 @@ namespace RLS_Computing
                         LambdaRLS = 1,// длина волны рлс
                         TimeS = 1,//длительность импульсного сигнала на выходе приемника
                         TetaE = 1,//ширина диграммы направленности антенны (ФАР) в плоскости Е, размерность которой определяет размерность ошибок
-                        Kg = 1
                     };
                     break;
                 case 4:
-                    masRLS[1] = new RLS()
+                    masRLS[4] = new RLS()
                     {
                         type = comboBox1.SelectedItem.ToString(),
+                        description = "Диапазон волн - сантиметровый\n" +
+                                        "Пределы работы\n" +
+                                        "по дальности, км 05…150\n" +
+                                        "по азимуту, град. 0…360\n" +
+                                        "по углу места, град. –0,10…+30\n" +
+                                        "по высоте, км 100\n" +
+                                        "Дальность обнаружения\n" +
+                                        "воздушной цели с ЭПР 1м2, км,\n" +
+                                        "на высотах 50 м 30\n" +
+                                        "100 м 45\n" +
+                                        "500 м 80\n" +
+                                        "1000 м 120\n" +
+                                        "10000 м 145\n" +
+                                        "Коэффициент подавления\n" +
+                                        "отражений от местных\n" +
+                                        "предметов, дБ 48\n" +
+                                        "Период обзора пространства, с 5,10\n" +
+                                        "Количество сопровождаемых\n" +
+                                        "целей 127\n" +
+                                        "Точность измерения координат:\n" +
+                                        "дальности, м 100\n" +
+                                        "азимута, мин. 15\n" +
+                                        "высоты, м 400\n" +
+                                        "Разрешающая способность:\n" +
+                                        "по дальности, м 300\n" +
+                                        "по азимуту, град. 4\n" +
+                                        "по высоте, м 1500\n" +
+                                        "Средняя излучаемая\n" +
+                                        "мощность, кВт 3",
                         D = 1,
                         Power = 3,
                         G0 = 1,
@@ -278,50 +402,57 @@ namespace RLS_Computing
                         LambdaRLS = 1,// длина волны рлс
                         TimeS = 1,//длительность импульсного сигнала на выходе приемника
                         TetaE = 1,//ширина диграммы направленности антенны (ФАР) в плоскости Е, размерность которой определяет размерность ошибок
-                        Kg = 1
                     };
                     break;
             }
-
-            masRLS[i].description = "Номер: " + 1 + "\n" +
-                                        "Тип: " + masRLS[i].type + "\n" +
-                                        "Длина: " + masRLS[i].D + "\n" +
-                                        "Мощность: " + masRLS[i].Power + "\n" +
-                                        "Коэф усиления: " + masRLS[i].G0 + "\n" +
-                                        "Длина волны: " + masRLS[i].Lambda + "\n" +
-                                        "Чувствительность: " + masRLS[i].Sensivity + "\n" +
-                                        "Параметр обнаружения: " + masRLS[i].q + "\n" +
-                                        "Результирующий коэф потерь: " + masRLS[i].K + "\n" +
-                                        "Приведенный потенциал: " + masRLS[i].Potential + "\n" +
-                                        "Эффектив полоса пропускания: " + masRLS[i].DeltaW + "\n" +
-                                        "Длина волны РЛС: " + masRLS[i].LambdaRLS + "\n" +
-                                        "Длительность импульсного сигнала: " + masRLS[i].TimeS + "\n" +
-                                        "Ширина диаграммы направ антенны: " + masRLS[i].TetaE + "\n";
             richTextBox1.Text = masRLS[i].description;
         }
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
-            selectedLA = comboBox2.SelectedIndex;
-            if (selectedLA == 0)
+            int i = selectedLA = comboBox2.SelectedIndex;
+            switch (selectedLA)
             {
-                richTextBox1.Text = "text la 1";
+                case 0:
+                    masLA[0] = new LA()
+                    {
+                        type = comboBox2.SelectedItem.ToString(),
+                        Surface = 1,
+                    };
+                    break;
+                case 1:
+                    masLA[1] = new LA()
+                    {
+                        type = comboBox2.SelectedItem.ToString(),
+                        Surface = 1,
+                    };
+                    break;
+                case 2:
+                    masLA[2] = new LA()
+                    {
+                        type = comboBox2.SelectedItem.ToString(),
+                        Surface = 1,
+                    };
+                    break;
+                case 3:
+                    masLA[3] = new LA()
+                    {
+                        type = comboBox2.SelectedItem.ToString(),
+                        Surface = 1,
+                    };
+                    break;
+                case 4:
+                    masLA[4] = new LA()
+                    {
+                        type = comboBox2.SelectedItem.ToString(),
+                        Surface = 1,
+                    };
+                    break;
             }
-            if (selectedLA == 1)
-            {
-                richTextBox1.Text = "text la 2";
-            }
-            if (selectedLA == 2)
-            {
-                richTextBox1.Text = "text la 3";
-            }
-            if (selectedLA == 3)
-            {
-                richTextBox1.Text = "text la 4";
-            }
-            if (selectedLA == 4)
-            {
-                richTextBox1.Text = "text la 51";
-            }
+            masLA[i].description = "Номер: " + 1 + "\n" +
+                                        "Тип: " + masLA[i].type + "\n" +
+                                        "Эфф отражающая поверхность: " + masLA[i].Surface + "\n";
+                                       
+            richTextBox1.Text = masLA[i].description;
         }
 
         private void toolStripButton1_Click(object sender, EventArgs e)
@@ -332,7 +463,7 @@ namespace RLS_Computing
 
         private void pictureBox1_Paint(object sender, PaintEventArgs e)
         {
-            Image part = new Bitmap(Properties.Resources.mmfree_icon_sign_7033452);
+            Image part = new Bitmap(Properties.Resources.goal);
             e.Graphics.DrawImage(part, (float)((pictureBox1.Size.Width * 0.5) - 32), (float)(pictureBox1.Size.Height * 0.53 + pictureBox1.Size.Height * 0.47 * 0.5 - 35));
         }
 
@@ -358,6 +489,8 @@ namespace RLS_Computing
             }
             CalculateForm f3 = new CalculateForm();
             f3.Show();
+            f3.TransferValues(n,m,masSKO);
+            f3.SetValues();
         }
 
         private void toolStripButton3_Click(object sender, EventArgs e)
@@ -398,14 +531,16 @@ namespace RLS_Computing
     public class SKO
     {
         public bool installed;
-        RLS rls;
-        LA la;
+        public RLS rls;
+        public LA la;
         public double SigmaD;//ошибка измерения дальности
         public double SigmaV2;//ошибка в измерении скорости
         public double SigmaE;//ошибка в измерении угловых координат
         public double SigmaB;
         public SKO(RLS rls, LA la)
         {
+            this.rls = rls;
+            this.la = la;
             SigmaD = 1;
             SigmaV2 = (rls.LambdaRLS/2)*((Math.Sqrt(3)*Math.Pow(rls.D,2))/Math.PI*rls.TimeS*Math.Sqrt(rls.Potential*la.Surface));
             SigmaE = 1;
@@ -415,32 +550,8 @@ namespace RLS_Computing
     {
         public double LocationX, LocationY;
         public string type;
-
         public double Surface;//эфф отраж поверхность цели
-
-
-
-
-
-
-
-
-
-
-
-
-
-        public double D;//длина?
-        public double Power;//излучаемая мощность
-        public double G0;//коэфф усил
-        public double Lambda;//длина волны
-        public double Sensivity;//чувствительность P пр мин
-        public double q;//параметр обнаружения
-        public double DeltaW;// эффективная полоса пропускания
-        public double LambdaRLS;// длина волны рлс
-        public double TimeS;//длительность импульсного сигнала на выходе приемника
-        public double TetaE;//ширина диграммы направленности антенны (ФАР) в плоскости Е, размерность которой определяет размерность ошибок
-        public double TetaB;//ширина диграммы направленности антенны (ФАР) в плоскости B
+        public string description;
     }
 
 }

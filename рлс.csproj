@@ -112,9 +112,6 @@
     <None Include="Resources\_1л117.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\_19ж6.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\_35н6.png" />
   </ItemGroup>
   <ItemGroup>
@@ -154,7 +151,16 @@
     <None Include="Resources\icons8-restart-96.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\_19ж6_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\goal.png" />
+  </ItemGroup>
+  <ItemGroup>
     <None Include="Resources\_1л117м.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_19ж6.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\_22ж6.png" />
@@ -164,9 +170,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\_55ж6.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\_19ж6_1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
