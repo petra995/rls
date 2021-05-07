@@ -160,7 +160,8 @@ namespace RLS_Computing
             this.toolStripButton2});
             this.toolStrip1.Location = new System.Drawing.Point(12, 7);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(374, 27);
+            this.toolStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
+            this.toolStrip1.Size = new System.Drawing.Size(413, 31);
             this.toolStrip1.TabIndex = 12;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -169,7 +170,7 @@ namespace RLS_Computing
             this.toolStripButton3.Image = global::RLS_Computing.Properties.Resources.icons8_restart_96;
             this.toolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton3.Name = "toolStripButton3";
-            this.toolStripButton3.Size = new System.Drawing.Size(136, 24);
+            this.toolStripButton3.Size = new System.Drawing.Size(136, 28);
             this.toolStripButton3.Text = "Перезагрузить";
             this.toolStripButton3.Click += new System.EventHandler(this.toolStripButton3_Click);
             // 
@@ -178,21 +179,21 @@ namespace RLS_Computing
             this.toolStripButton1.Image = global::RLS_Computing.Properties.Resources.icons8_erase_96__1_1;
             this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(138, 24);
+            this.toolStripButton1.Size = new System.Drawing.Size(138, 28);
             this.toolStripButton1.Text = "Оч&истить карту";
             this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 27);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 31);
             // 
             // toolStripButton2
             // 
             this.toolStripButton2.Image = global::RLS_Computing.Properties.Resources.icons8_help_96;
             this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton2.Name = "toolStripButton2";
-            this.toolStripButton2.Size = new System.Drawing.Size(91, 24);
+            this.toolStripButton2.Size = new System.Drawing.Size(91, 28);
             this.toolStripButton2.Text = "Спр&авка";
             this.toolStripButton2.Click += new System.EventHandler(this.toolStripButton2_Click);
             // 

@@ -171,5 +171,17 @@
   <ItemGroup>
     <None Include="Resources\_55ж6.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ca1131-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0a6AunES0tk-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\5b7400dd940d6efaa69462218f1e19e6f22bce4a-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fighter_Airplane_486096_1920x1200-removebg-preview.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

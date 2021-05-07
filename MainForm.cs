@@ -114,21 +114,21 @@ namespace RLS_Computing
                 {
                     if (!installedLA[0] && selectedLA == 0)
                     {
-                        part = new Bitmap(Properties.Resources.su35g);
+                        part = new Bitmap(Properties.Resources.Fighter_Airplane_486096_1920x1200_removebg_preview);
 
                         g.DrawImage(part, e.X, e.Y);
                         installedLA[0] = true;
                     }
                     if (!installedLA[1] && selectedLA == 1)
                     {
-                        part = new Bitmap(Properties.Resources.бпла);
+                        part = new Bitmap(Properties.Resources._5b7400dd940d6efaa69462218f1e19e6f22bce4a_removebg_preview);
                         g.DrawImage(part, e.X, e.Y);
 
                         installedLA[1] = true;
                     }
                     if (!installedLA[2] && selectedLA == 2)
                     {
-                        part = new Bitmap(Properties.Resources.yak_130_top);
+                        part = new Bitmap(Properties.Resources._0a6AunES0tk_removebg_preview);
                         g.DrawImage(part, e.X, e.Y);
                         installedLA[2] = true;
                     }
@@ -416,7 +416,7 @@ namespace RLS_Computing
                     masLA[0] = new LA()
                     {
                         type = comboBox2.SelectedItem.ToString(),
-                        Surface = 1,
+                        Surface = 3,
                     };
                     break;
                 case 1:
@@ -430,7 +430,7 @@ namespace RLS_Computing
                     masLA[2] = new LA()
                     {
                         type = comboBox2.SelectedItem.ToString(),
-                        Surface = 1,
+                        Surface = 25,
                     };
                     break;
                 case 3:

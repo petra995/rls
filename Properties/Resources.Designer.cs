@@ -63,6 +63,16 @@ namespace RLS_Computing.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _0a6AunES0tk_removebg_preview {
+            get {
+                object obj = ResourceManager.GetObject("_0a6AunES0tk_removebg_preview", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _19ж6 {
             get {
                 object obj = ResourceManager.GetObject("_19ж6", resourceCulture);
@@ -106,6 +116,26 @@ namespace RLS_Computing.Properties {
         internal static System.Drawing.Bitmap _55ж6 {
             get {
                 object obj = ResourceManager.GetObject("_55ж6", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _5b7400dd940d6efaa69462218f1e19e6f22bce4a_removebg_preview {
+            get {
+                object obj = ResourceManager.GetObject("_5b7400dd940d6efaa69462218f1e19e6f22bce4a_removebg_preview", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Fighter_Airplane_486096_1920x1200_removebg_preview {
+            get {
+                object obj = ResourceManager.GetObject("Fighter_Airplane_486096_1920x1200_removebg_preview", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
