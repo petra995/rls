@@ -80,6 +80,7 @@ namespace RLS_Computing
                         part = new Bitmap(Properties.Resources._22ж6);
                         g.DrawImage(part, e.X, e.Y);
                         installedRLS[0] = true;
+                        masRLS[0].installed = true;
 
                     }
                     if (!installedRLS[1] && selectedRLS == 1)
@@ -87,24 +88,28 @@ namespace RLS_Computing
                         part = new Bitmap(Properties.Resources._55ж6);
                         g.DrawImage(part, e.X, e.Y);
                         installedRLS[1] = true;
+                        masRLS[1].installed = true;
                     }
                     if (!installedRLS[2] && selectedRLS == 2)
                     {
                         part = new Bitmap(Properties.Resources._35д6);
                         g.DrawImage(part, e.X, e.Y);
                         installedRLS[2] = true;
+                        masRLS[2].installed = true;
                     }
                     if (!installedRLS[3] && selectedRLS == 3)
                     {
                         part = new Bitmap(Properties.Resources._1л117м);
                         g.DrawImage(part, e.X, e.Y);
                         installedRLS[3] = true;
+                        masRLS[3].installed = true;
                     }
                     if (!installedRLS[4] && selectedRLS == 4)
                     {
                         part = new Bitmap(Properties.Resources._19ж6);
                         g.DrawImage(part, e.X, e.Y);
                         installedRLS[4] = true;
+                        masRLS[4].installed = true;
                     }
                 }
             }
@@ -118,6 +123,7 @@ namespace RLS_Computing
 
                         g.DrawImage(part, e.X, e.Y);
                         installedLA[0] = true;
+                        masLA[0].installed = true;
                     }
                     if (!installedLA[1] && selectedLA == 1)
                     {
@@ -125,24 +131,14 @@ namespace RLS_Computing
                         g.DrawImage(part, e.X, e.Y);
 
                         installedLA[1] = true;
+                        masLA[1].installed = true;
                     }
                     if (!installedLA[2] && selectedLA == 2)
                     {
                         part = new Bitmap(Properties.Resources._0a6AunES0tk_removebg_preview);
                         g.DrawImage(part, e.X, e.Y);
                         installedLA[2] = true;
-                    }
-                    if (!installedLA[3] && selectedLA == 3)
-                    {
-                        part = new Bitmap(Properties.Resources.рлс_иконка_4);
-                        g.DrawImage(part, e.X, e.Y);
-                        installedLA[3] = true;
-                    }
-                    if (!installedLA[4] && selectedLA == 4)
-                    {
-                        part = new Bitmap(Properties.Resources.рлс_иконка_5);
-                        g.DrawImage(part, e.X, e.Y);
-                        installedLA[4] = true;
+                        masLA[2].installed = true;
                     }
                 }
             }
