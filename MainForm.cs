@@ -538,6 +538,24 @@ namespace RLS_Computing
         private void button5_Click(object sender, EventArgs e)
         {
             //проверка кса
+            bool flag = false;
+            for (int i = 0; i < installedRLS.Length; i++)
+            {
+                if (installedRLS[i])
+                {
+                    flag = true;
+                }
+            }
+            string str = "";
+            if(flag)
+            {
+                str = "КСА 98Ш6М боеготов, исправен, осуществляется выдача РЛИ";
+            }
+            else if(!flag)
+            {
+                str = "КСА 98Ш6М боеготов, исправен, выдача РЛИ не осуществляется";
+            }
+            MessageBox.Show(str, "Проверка КСА");
         }
 
         private void toolStripButton3_Click(object sender, EventArgs e)
