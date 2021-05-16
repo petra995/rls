@@ -15,6 +15,7 @@ namespace RLS_Computing
         public HelpForm()
         {
             InitializeComponent();
+            
         }
     }
 }

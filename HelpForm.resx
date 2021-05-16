@@ -118,12 +118,11 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="richTextBox1.Text" xml:space="preserve">
-    <value> тут кароче объяснение  тут кароче объяснение  тут кароче объяснение
- тут кароче объяснение  тут кароче объяснение  тут кароче объяснение
- тут кароче объяснение  тут кароче объяснение  тут кароче объяснение
- тут кароче объяснение  тут кароче объяснение  тут кароче объяснение
- тут кароче объяснение  тут кароче объяснение  тут кароче объяснение
- тут кароче объяснение</value>
+    <value>  1) Проверьте боеготовность КСА и обмен информации с ИРЛИ, для этого нажмите «Проверка КСА»
+  2) Выберите ИРЛИ, для установки на карте, для начала работы программы
+  3) Выбрите воздушный объект и установите на карте, для перехода к расчетам СКО
+  4) Для расчёта СКО нажмите кнопку «Расчитать»
+  5) Ознакомьтесь с таблицей данных СКО по цели от ИРЛИ, взаимодействующих с КСА 98Ш6М</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">

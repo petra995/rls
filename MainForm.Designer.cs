@@ -102,9 +102,7 @@ namespace RLS_Computing
             this.comboBox2.Items.AddRange(new object[] {
             "Истребитель",
             "Беспилотник",
-            "Бомбардировщик",
-            "4 (мб Ракета)",
-            "5 (мб Дрон)"});
+            "Бомбардировщик"});
             this.comboBox2.Location = new System.Drawing.Point(12, 190);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(138, 28);
@@ -161,7 +159,7 @@ namespace RLS_Computing
             this.toolStrip1.Location = new System.Drawing.Point(12, 7);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.toolStrip1.Size = new System.Drawing.Size(413, 31);
+            this.toolStrip1.Size = new System.Drawing.Size(374, 31);
             this.toolStrip1.TabIndex = 12;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -271,8 +269,9 @@ namespace RLS_Computing
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(138, 54);
             this.button5.TabIndex = 20;
-            this.button5.Text = "Кнопка еще одна";
+            this.button5.Text = "Проверка кса";
             this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // pictureBox1
             // 
