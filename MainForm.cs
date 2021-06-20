@@ -527,7 +527,7 @@ namespace RLS_Computing
             }
             CalculateForm f3 = new CalculateForm();
             f3.Show();
-            f3.TransferValues(n,m,masSKO);
+            f3.TransferMas(masLA,masRLS);
             f3.SetValues();
         }
 
